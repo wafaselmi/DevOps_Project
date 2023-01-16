@@ -1,0 +1,19 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: rabbitmq
+  labels:
+    app: rabbitmq
+spec:
+  ports:
+  -  name: http
+     protocol: TCP
+     port: 15672
+     targetPort: 15672
+  -  name: amqp
+     protocol: TCP
+     port: 5672
+     targetPort: 5672 
+  clusterIP: None
+  selector:
+    app: nginx
