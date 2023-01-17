@@ -8,3 +8,4 @@
 
 venv/
 prometheus-2.41.0.windows-amd64/
+__pycache__
