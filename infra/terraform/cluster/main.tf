@@ -1,13 +1,14 @@
-data "azurerm_resource_group" "dev" {
+data "azurerm_resource_group" "deployment" {
   name = var.resource_group_name
 }
 
-resource "azurerm_kubernetes_cluster" "example" {
-  name                = "pfe-se"
-  location            = data.azurerm_resource_group.dev.location
-  resource_group_name = data.azurerm_resource_group.dev.name
-  dns_prefix          = "pfe-se"
+resource "azurerm_kubernetes_cluster" "videomp3-cluster" {
+  name                = "videomp3-converter"
+  location            = data.azurerm_resource_group.deployment.location
+  resource_group_name = data.azurerm_resource_group.deployment.name
+  dns_prefix          = "videomp3-converter"
   sku_tier            = "Free"
+  http_application_routing_enabled = true
 
   default_node_pool {
     name                = "default"
