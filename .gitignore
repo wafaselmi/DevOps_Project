@@ -6,4 +6,6 @@
 
 !infrastructure/terraform/0-backend/terraform.tfstate*
 
-src/*/venv/
+./src/authService/venv/
+./src/converterService/venv/
+./src/gatewayService/venv/
