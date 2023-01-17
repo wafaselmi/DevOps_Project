@@ -7,4 +7,4 @@
 !infra/terraform/01-terraformState/terraform.tfstate*
 
 venv/
-prometheus/prometheus-2.41.0.windows-amd64/
+prometheus-2.41.0.windows-amd64/
