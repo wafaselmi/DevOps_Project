@@ -1,5 +1,5 @@
 resource "azurerm_resource_group" "dad" {
-  name     = "deployment-automation"
+  name     = "dad"
   location = "France Central"
 
   tags = {
@@ -8,7 +8,7 @@ resource "azurerm_resource_group" "dad" {
 }
 
 resource "azurerm_storage_account" "dad-storaccount" {
-  name                     = "terraformstateconverter"
+  name                     = "terraformstateconv"
   resource_group_name      = azurerm_resource_group.dad.name
   location                 = azurerm_resource_group.dad.location
   account_tier             = "Standard"
@@ -16,14 +16,14 @@ resource "azurerm_storage_account" "dad-storaccount" {
 }
 
 resource "azurerm_storage_container" "dad-storcontainer" {
-  name                  = "cluster"
+  name                  = "dad-storcontainer"
   storage_account_name  = azurerm_storage_account.dad-storaccount.name
   container_access_type = "private"
 }
 
 resource "azurerm_storage_blob" "dad-storblob" {
-  name                   = "cluster.json"
-  storage_account_name   = azurerm_storage_account.devops-storage-account.name
-  storage_container_name = azurerm_storage_container.dadstorcontainer.name
+  name                   = "dad.json"
+  storage_account_name   = azurerm_storage_account.dad-storaccount.name
+  storage_container_name = azurerm_storage_container.dad-storcontainer.name
   type                   = "Block"
 }

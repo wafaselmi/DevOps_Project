@@ -4,16 +4,14 @@ from flask_pymongo import PyMongo
 from auth import validate
 from auth_SVC import access
 from storage import util
-from bson.Objectid import ObjectId
+from prometheus_flask_exporter import PrometheusMetrics
+from bson.objectid import ObjectId
+from observability.counter import REQUEST_COUNTER
 
 server = Flask(__name__)
 
-mongo_video = PyMongo(
-    server,
-    uri="mongodb://host.minikube.internal:27017/videos") 
-mongo_mp3 = PyMongo(
-    server,
-    uri="mongodb://host.minikube.internal:27017/mp3s") 
+mongo_video = PyMongo(server, uri=os.environ.get('MONGODB_VIDEOS_URI'))
+mongo_mp3 = PyMongo(server, uri=os.environ.get('MONGODB_MP3S_URI'))
 fs_videos = gridfs.GridFS(mongo_video.db)
 fs_mp3s = gridfs.GridFS(mongo_mp3.db)
 connection = pika.BlockingConnection(pika.ConnectionParameters("rabbitmq"))
@@ -40,8 +38,9 @@ def upload():
             err= util.upload(f, fs_videos, channel, access)
             
             if err :
+                REQUEST_COUNTER.labels(status=500).inc()
                 return err
-            
+        REQUEST_COUNTER.labels(status=200).inc()    
         return "success", 200    
     else:
         return "not authorized", 401

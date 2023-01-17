@@ -38,7 +38,7 @@ deactivate () {
 # unset irrelevant variables
 deactivate nondestructive
 
-VIRTUAL_ENV="C:\Users\wafa-\DevOps_Project\src\gateway\venv"
+VIRTUAL_ENV="C:\Users\wafa-\DevOps_Project\src\gatewayService\venv"
 export VIRTUAL_ENV
 
 _OLD_VIRTUAL_PATH="$PATH"

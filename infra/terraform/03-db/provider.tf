@@ -1,3 +1,14 @@
+data "terraform_remote_state" "aks" {
+  backend = "azurerm" 
+  config {
+    resource_group_name  = "dad"
+    container_name       = "dad-storcontainer"
+    storage_account_name = "terraformstateconv"
+    key                  = "dad.json"
+  }
+
+}
+
 locals {
   kube_config            = one(data.terraform_remote_state.aks.outputs.kube_config)
   host                   = local.kube_config.host
@@ -17,4 +28,4 @@ provider "helm" {
     client_key             = local.client_key
     cluster_ca_certificate = local.cluster_ca_certificate
   }
-}
+  }

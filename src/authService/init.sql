@@ -9,3 +9,4 @@ CREATE DATABASE auth;
  );
 
 INSERT INTO user (email, password) VALUES ('wafa.selmi@insat.ucar.tn', 'admiN123');
+INSERT INTO user (email, password) VALUES ('mohamedkhalil.ouertani@insat.ucar.tn', 'admiN123');

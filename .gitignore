@@ -4,8 +4,8 @@
 .terraform.tfstate.lock.info
 .terraform/
 
-!infrastructure/terraform/0-backend/terraform.tfstate*
+!infra/terraform/01-terraformState/terraform.tfstate*
 
-./src/authService/venv/
-./src/converterService/venv/
-./src/gatewayService/venv/
+./src/authService/venv
+./src/converterService/venv
+./src/gatewayService/venv

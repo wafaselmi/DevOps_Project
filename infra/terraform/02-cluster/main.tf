@@ -27,9 +27,8 @@ resource "azurerm_kubernetes_cluster" "dad-cluster" {
   }
 
   provisioner "local-exec" {
-    command = "echo ${self.kube_config_raw} >> ~/.kube/config"
+    command = "echo ${self.kube_config_raw} >> /.kube/config"
   }
-
   tags = {
     Environment = "Development"
   }
@@ -71,5 +70,4 @@ module "setup_gitops" {
   providers = {
     helm = helm
   }
-  namespace = default
   }

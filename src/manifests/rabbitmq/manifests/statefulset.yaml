@@ -47,11 +47,11 @@ spec:
         - name: rabbitmq-volume
           mountPath: "/var/lib/rabbitmq"
 
-  volumes:
+      volumes:
 
-    - name: rabbitmq-volume
-      persistentVolumeClaim :
-        claimName: rabbitmq-pvc
+        - name: rabbitmq-volume
+          persistentVolumeClaim :
+            claimName: rabbitmq-pvc
 
       
       
