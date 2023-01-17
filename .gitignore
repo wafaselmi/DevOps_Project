@@ -9,3 +9,4 @@
 ./src/authService/venv
 ./src/converterService/venv
 ./src/gatewayService/venv
+./src/gatewayService/observibility/prometheus/prometheus-2.41.0.windows-amd64
