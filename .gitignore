@@ -6,7 +6,7 @@
 
 !infra/terraform/01-terraformState/terraform.tfstate*
 
-./src/authService/venv
-./src/converterService/venv
-./src/gatewayService/venv
-./src/gatewayService/observibility/prometheus/prometheus-2.41.0.windows-amd64
+./src/authService/venv/
+./src/converterService/venv/
+./src/gatewayService/venv/
+./src/gatewayService/observibility/prometheus/prometheus-2.41.0.windows-amd64/
