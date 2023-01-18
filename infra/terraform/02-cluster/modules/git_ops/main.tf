@@ -26,10 +26,7 @@ spec:
   source:
     repoURL: https://github.com/wafaselmi/DevOps_Project
     targetRevision: HEAD
-    path: charts/cinema
-    helm:
-      valueFiles:
-      - values.yaml
+    path: /manifests
   destination:
     server: https://kubernetes.default.svc
     namespace: default
