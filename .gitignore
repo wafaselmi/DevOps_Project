@@ -1,13 +1,10 @@
-
+prometheus.exe
+promtool.exe
 *.tfstate
 *.tfstate.backup
 .terraform.tfstate.lock.info
 .terraform/
-
 !infra/terraform/01-terraformState/terraform.tfstate*
-
 venv/
-prometheus-2.41.0.windows-amd64/
 __pycache__
-promtool.exe
-prometheus.exe
+prometheus-2.41.0.windows-amd64/
