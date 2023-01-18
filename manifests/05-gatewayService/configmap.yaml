@@ -5,4 +5,4 @@ metadata:
 data:
   AUTH_SVC_ADDRESS: "auth:5000"
   MONGODB_VIDEOS_URI: "mongodb://wafaSelmi:wafou1234@mongodb:27017/videos?authSource=admin&readPreference=secondary&directConnection=true&ssl=false"
-  MONGODB_MP3S_URI: "mongodb://afaSelmi:wafou1234@mongodb:27017/mp3s?authSource=admin&readPreference=secondary&directConnection=true&ssl=false"
+  MONGODB_MP3S_URI: "mongodb://wafaSelmi:wafou1234@mongodb:27017/mp3s?authSource=admin&readPreference=secondary&directConnection=true&ssl=false"

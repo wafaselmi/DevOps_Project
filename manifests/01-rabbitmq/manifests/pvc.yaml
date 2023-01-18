@@ -1,9 +1,9 @@
 apiVersion: v1
 kind: PersistentVolumeClaim
 metadata:
-  name: rabbitmq
+  name: rabbitmq-pvc
 spec:
-  storageClassName: standard
+  storageClassName: manual
   resources:
     requests:    
       storage: 1Gi
