@@ -5,5 +5,5 @@ metadata:
 data:
   DATABASE_HOST: db
   DATABASE_NAME: authdb
-  DATABASE_USER: ahmed
+  DATABASE_USER: wafa.selmi@insat.ucar.tn
   AUTH_TABLE: auth_user

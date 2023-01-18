@@ -26,5 +26,4 @@ spec:
           envFrom:
             - configMapRef:
                 name: auth-configmap
-            - secretRef:
-                name: auth-secret
+            
