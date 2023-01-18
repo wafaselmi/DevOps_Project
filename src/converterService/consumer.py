@@ -4,7 +4,7 @@ import gridfs
 from convert import to_mp3
 
 def main():
-    client = MongoClient("host.minikube.internal", 27017) #should be edited I guess
+    client = MongoClient(os.environ.get('MONGODB_URI')) 
     db_videos = client.videos
     db_mp3s = client.mp3s
     #gridfs

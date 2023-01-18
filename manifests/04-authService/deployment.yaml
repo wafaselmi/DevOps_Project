@@ -20,7 +20,7 @@ spec:
     spec:
       containers:
         - name: auth
-          image: wafaselmi/authserv:latest
+          image: wafaselmi/authservice:v1.4
           ports:
             - containerPort: 5000
           envFrom:

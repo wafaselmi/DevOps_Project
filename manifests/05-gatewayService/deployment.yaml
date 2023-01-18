@@ -19,7 +19,7 @@ spec:
     spec:
       containers:
         - name: gateway
-          image: wafaselmi/gateway:latest
+          image: wafaselmi/gatewayservice
           envFrom:
             - configMapRef:
                 name: gateway-configmap

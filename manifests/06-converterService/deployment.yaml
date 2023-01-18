@@ -20,7 +20,7 @@ spec:
     spec:
       containers:
         - name: converter
-          image: wafaselmi/converter:latest
+          image: wafaselmi/converterservice:v1.3
           envFrom:
             - configMapRef:
                 name: converter-configmap
