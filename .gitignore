@@ -6,5 +6,4 @@ promtool.exe
 .terraform/
 !infra/terraform/01-terraformState/terraform.tfstate*
 venv/
-__pycache__
-src/gatewayService/observability/prometheus/prometheus-2.41.0.windows-amd64/
+__pycache__/
