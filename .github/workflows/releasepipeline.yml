@@ -29,3 +29,17 @@ jobs:
           context: ./src/authService
           file: ./src/authService/Dockerfile
           tags: wafaselmi/authservice:${{ steps.get_version.outputs.VERSION }}
+      - name: Build and push converterService microservice
+        uses: docker/build-push-action@v3
+        with:
+          push: true
+          context: ./src/converterService
+          file: ./src/converterService/Dockerfile
+          tags: wafaselmi/converterservice:${{ steps.get_version.outputs.VERSION }}
+      - name: Build and push gatewayService microservice
+        uses: docker/build-push-action@v3
+        with:
+          push: true
+          context: ./src/gateway
+          file: ./src/gateway/Dockerfile
+          tags: wafaselmi/gatewayservice:${{ steps.get_version.outputs.VERSION }}    
