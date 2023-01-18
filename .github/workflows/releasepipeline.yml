@@ -28,4 +28,4 @@ jobs:
           push: true
           context: ./src/authService
           file: ./src/authService/Dockerfile
-          tags: wafaselmi/${{ env.USERS_IMAGE_NAME }}:${{ steps.get_version.outputs.VERSION }}
+          tags: wafaselmi/authservice:${{ steps.get_version.outputs.VERSION }}
